@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>CAM UI presentation at Mondeca</title>
+    <meta name="description" content="An approach to performance on the web">
+    <meta name="author" content="Alessandro Menduni">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/black.css" id="theme">
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- Printing and PDF exports -->
+    <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/print.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+    <!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+</head>
+
+<body style="background-color: #34495e">
+    <div class="reveal">
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+            <section data-background="#F62459">
+                <h1>CAM UI</h1>
+                <h3>Past, present and future</h3>
+                <p>
+                    <small>A presentation by Alessandro Menduni</small>
+                </p>
+            </section>
+            <section>
+                <h2>Before / after</h2>
+                <p>
+                    Some additions to the old UI worth focusing on:
+                </p>
+                <ul>
+                    <li class="fragment">Document readability</li>
+                    <li class="fragment">Progress tracking</li>
+                    <li class="fragment">Dashboard</li>
+                    <li class="fragment">Live filters</li>
+                </ul>
+            </section>
+            <section>
+                <section data-background="#F62459">
+                    <h2>Document readability</h2>
+                </section>
+                <section>
+                    <h2>Before</h2>
+                    <img src="assets/document-before.png" alt="">
+                </section>
+                <section>
+                    <h2>After</h2>
+                    <img src="assets/document-after.png" alt="">
+                </section>
+            </section>
+            <section>
+                <section data-background="#F62459">
+                    <h2>Progress tracking</h2>
+                </section>
+                <section>
+                    <h2>Before</h2>
+                    <figure>
+                        <img src="assets/progress-before.gif" alt="">
+                    </figure>
+                </section>
+                <section>
+                    <h2>After</h2>
+                    <figure>
+                        <img src="assets/progress-after.gif" alt="">
+                    </figure>
+                </section>
+            </section>
+            <section>
+                <section data-background="#F62459">
+                    <h2>Dashboard</h2>
+                </section>
+                <section data-background="assets/dashboard-after.png" data-background-transition="zoom">
+                </section>
+            </section>
+            <section>
+                <section data-background="#F62459">
+                    <h2>Filters</h2>
+                </section>
+                <section data-background="assets/filters-after.png" data-background-transition="zoom">
+                </section>
+            </section>
+            <section data-background="#F62459">
+                <h2>Future</h2>
+            </section>
+            <section>
+                <h2>Persistence</h2>
+                <p>Will open up to new possibilities:</p>
+                <ul>
+                    <li class="fragment">Resume suspended activities</li>
+                    <li class="fragment">Long-term statistics</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Smart disambiguation</h2>
+                <p>Why delegating it to the user?</p>
+                <figure>
+                    <img style="max-height: 500px" src="assets/addtag.png" alt="">
+                </figure>
+            </section>
+            <section>
+                <section>
+                    <h2>Cluster-based aboutness assessment</h2>
+                    <img style="max-height: 500px" src="assets/cluster-tree.png" alt="">
+                </section>
+                <section>
+                    <h2>Cluster-based aboutness assessment</h2>
+                    <img src="assets/cluster-dashboard.png" alt="">
+                </section>
+            </section>
+            <section>
+                <section data-background="#F62459">
+                    <h2>Pointers</h2>
+                </section>
+                <section>
+                    <h2>CAM UI</h2>
+                    <a href="https://goo.gl/ybG2I2">goo.gl/ybG2I2</a>
+                </section>
+                <section>
+                    <h2>My awesome report</h2>
+                    <figure>
+                        <figcaption>
+                            Get a free copy at <a href="https://goo.gl/aBBFFK">goo.gl/aBBFFK</a>
+                        </figcaption>
+                        <img style="max-height: 500px;" src="assets/awesome-report.png" alt="">
+                        <img style="max-height: 500px;" src="assets/awesome-report-perf.png" alt="">
+                    </figure>
+                </section>
+            </section>
+        </div>
+    </div>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+    <script>
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [{
+            src: 'lib/js/classList.js',
+            condition: function() {
+                return !document.body.classList;
+            }
+        }, {
+            src: 'plugin/markdown/marked.js',
+            condition: function() {
+                return !!document.querySelector('[data-markdown]');
+            }
+        }, {
+            src: 'plugin/markdown/markdown.js',
+            condition: function() {
+                return !!document.querySelector('[data-markdown]');
+            }
+        }, {
+            src: 'plugin/highlight/highlight.js',
+            async: true,
+            callback: function() {
+                hljs.initHighlightingOnLoad();
+            }
+        }, {
+            src: 'plugin/zoom-js/zoom.js',
+            async: true
+        }, {
+            src: 'plugin/notes/notes.js',
+            async: true
+        }]
+    });
+    </script>
+</body>
+
+</html>
